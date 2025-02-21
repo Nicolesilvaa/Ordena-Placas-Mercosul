@@ -32,8 +32,8 @@ class Cvetor:
 
         #Criando funções para o couting sort
 
-        #Função de ordenação para as strings da placa ------------------------------------------------------------------
-        def countingSortString(posicaoDigito):
+        #Função de ordenação para as placas ------------------------------------------------------------------
+        def countingSort(posicaoDigito):
 
             k =  self.len
             maxElem = 256 # Uma vez que estou trabalhado com caracteres ASCII esqueci desse detalhe na última solução
@@ -64,65 +64,14 @@ class Cvetor:
 
             return vetorOrdenado
 
-        #Função de ordenação para os valores numéricos da placa ------------------------------------------------------
-        def countingSortNum(posicaoDigito):
-
-            maxElem = 10 #Dígitos possíveis do sistema decimal de contagem
-            j = self.len
-            vetorOrdenado = [' '] * j
-            contador = [0] * (maxElem + 1)
-
-            #Contando occorrências
-            for i in range(j):
-
-                digito = self.vet[i][posicaoDigito]
-
-                #Garantindo que só pegue números
-                if '0' <= digito <= '9':
-                    digito = int(digito)
-
-                else: 
-                    continue
-
-                contador[digito] += 1
-
-            #ACumulando a contagem
-            for i in range(1, maxElem + 1):
-                contador[i] += contador[i-1]
-
-            #Ordenando vetor
-            i = j - 1
-            while i >= 0:
-
-                digito = self.vet[i][posicaoDigito]
-
-                #Garantindo que só pegue números
-                if '0' <= digito <= '9':
-                    digito = int(digito)
-
-                else: 
-                    continue
-
-                vetorOrdenado[contador[digito] - 1] = self.vet[i]
-                contador[digito] -= 1
-
-                i -= 1
-
-            return vetorOrdenado
-
+        
         # Código principal Radix --------------------------------------------------------------------------------
 
-        maiorValorString = 4
-        maiorValorNumerico = 3
+        maiorValor = 7
 
         #Ordenando strings, sempre de trás para frente
-        for posicaoDigitoS in range(maiorValorString - 1, -1, -1):
-            self.vet = countingSortString(posicaoDigitoS)
-
-        #Ordenando números
-        for posicaoDigitoN in range(maiorValorNumerico -1, -1,-1):
-            self.vet = countingSortNum(posicaoDigitoN)
-
+        for posicaoDigito in range(maiorValor - 1, -1, -1):
+            self.vet = countingSort(posicaoDigito)
 
         return self.vet
         #----------------------------------------------------------------------------------------------------------
