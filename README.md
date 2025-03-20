@@ -7,7 +7,7 @@
 
 # O Problema: 📍
 
->  Desenvovler um algoritmo para ordenar a base de dados de placas de veículos, no formato PIV. 
+>  Desenvolver um algoritmo para ordenar a base de dados de placas de veículos, no formato PIV. 
 
 # Produtos Esperados: ✅
 
