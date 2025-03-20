@@ -5,28 +5,16 @@
 - Construir um protótipo de teste baseado na solução proposta;
 - Entender os processos de manipulação de arquivos em Python.
 
-
 # O Problema: 📍
-Uma startup está iniciando o desenvolvimento de uma aplicação para monitorar o tráfego de veículos em várias cidades da América Latina, a procura de carros roubados ou com alguma pendência judicial. O sistema irá captar imagens dos carros através de câmeras de monitoramento de tráfego. Um sistema de visão computacional extrairá a numeração da placa e informará ao sistema. Uma busca pela placa do veículo será feita e caso seja encontrado algum problema, um alerta será disparado para que o veículo possa ser rastreado pelas câmeras dos arredores, até que a força policial o alcance.
 
-A base de dados do sistema é formada pela integração de diversas bases regionais/nacionais fornecidas pelos países latino-americanos. Essas bases são atualizadas em tempos distintos, e portanto, devem ser integradas/ordenadas regularmente. Todo o processamento da base de dados será feito em um datacenter/nuvem, com diversos nós formados por GPUs com alto poder de processamento paralelo. Portanto, a escolha dos algoritmos que irão processar esses dados deve considerar que o algoritmo poderá fazer uso de paralelismo na sua versão de produção [5].
-
-Nesse momento a empresa está interessada em contratar programadores capazes de propor soluções criativas e eficientes para os problemas do sistema a ser desenvolvido. Como parte da avaliação para as vagas de programador, foi solicitado que os candidatos propusessem um algoritmo para a etapa de ordenação da base de dados de placas de veículos, no formato PIV. As melhores propostas serão consideradas para que os candidatos prossigam no processo seletivo.
+>  Desenvovler um algoritmo para ordenar a base de dados de placas de veículos, no formato PIV. 
 
 # Produtos Esperados: ✅
 
-A avaliação dos candidatos será baseada em dois produtos:
-
-    Um pequeno relatório técnico onde o candidato demonstre sua capacidade de comunicação, deixando claros os critérios de escolha do algoritmo de ordenação, o quanto ele é aderente aos requisitos do problema e indicando a sua complexidade 2;
-    Uma aplicação protótipo, codificada em Python, que permita comprovar a eficiencia do algoritmo de ordenação escolhido.
-
-Para a construção do protótipo o candidato deve seguir os seguintes critérios:
-
-    O protótipo deve ser codificado em Python, sem dependencias externas 3 e sem o uso de estruturas de dados prontas da linguagem 4.
-    Como entrada o seu protótipo deve ler um arquivo texto (ASCII) com uma base de dados de placas PIV não ordenadas;
-    Como saída, seu protótipo produzirá um novo arquivo texto (ASCII) com a base de dados ordenada lexicograficamente;
-    O código do seu protótipo deve utilizar os conceitos de Tipo Abstrato de Dados / Classes e Modularização;
-
+- Uma aplicação protótipo, codificada em Python, que permita comprovar a eficiencia do algoritmo de ordenação escolhido;
+- O protótipo deve ser codificado em Python, sem dependencias externas 3 e sem o uso de estruturas de dados prontas da linguagem 4;
+- Como entrada o protótipo deve ler um arquivo texto (ASCII) com uma base de dados de placas PIV não ordenadas;
+- Como saída, o protótipo produzirá um novo arquivo texto (ASCII) com a base de dados ordenada lexicograficamente.
 
 # Relatório da solução proposta📋
 
